@@ -6,17 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>导航栏示例</title>
     <style>
-        /* 导航栏样式 */
-        .navbar {
-            background-color: #333;
-            overflow: hidden;
+        /* 设置导航栏为圆角样式 */
+        nav {
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: #333;
         }
 
-        /* 导航栏中的链接样式 */
-        .navbar a {
+        /* 设置导航栏内的列表样式 */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 设置导航栏内的列表项样式 */
+        nav li {
             float: left;
+        }
+
+        /* 设置导航栏内的链接样式 */
+        nav a {
             display: block;
             color: white;
             text-align: center;
@@ -25,47 +35,45 @@
         }
 
         /* 鼠标悬停在链接上时改变颜色 */
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
+        nav a:hover {
+            background-color: #111;
         }
 
-        /* 分类标题行样式 */
-        .category-title {
+        /* 设置下拉菜单的内容分类之间有分隔线 */
+        li:not(:last-child) {
+            border-right: 1px solid #bbb;
+        }
+
+        /* 分类标题行字体加粗 */
+        .dropdown-content h3 {
             font-weight: bold;
         }
 
-        /* 分类内容文字链接样式 */
-        .category-content a {
-            text-decoration: none;
-            color: blue;
-        }
-
-        /* 分类之间的分隔线样式 */
-        hr {
-            border: none;
-            border-top: 1px solid #ccc;
+        /* 分类内容文字加链接 */
+        .dropdown-content a {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <div class="navbar">
-        <a href="#home">首页</a>
-        <a href="#news">新闻</a>
-        <a href="#contact">联系我们</a>
-        <a href="#about">关于我们</a>
-    </div>
-
-    <!-- 内容分类 -->
-    <div class="category">
-        <h2 class="category-title">分类一</h2>
-        <p><a href="#">链接1</a></p>
-        <p><a href="#">链接2</a></p>
-        <hr>
-        <h2 class="category-title">分类二</h2>
-        <p><a href="#">链接3</a></p>
-        <p><a href="#">链接4</a></p>
-    </div>
+    <nav>
+        <ul>
+            <li><a href="#home">首页</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">分类</a>
+                <div class="dropdown-content">
+                    <h3>分类一</h3>
+                    <a href="#">链接1</a>
+                    <a href="#">链接2</a>
+                    <a href="#">链接3</a>
+                    <h3>分类二</h3>
+                    <a href="#">链接4</a>
+                    <a href="#">链接5</a>
+                    <a href="#">链接6</a>
+                </div>
+            </li>
+            <li><a href="#contact">联系我们</a></li>
+        </ul>
+    </nav>
 </body>
 </html>
