@@ -4,29 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>导航栏示例</title>
+    <title>免费分享</title>
     <style>
-        /* 设置导航栏为圆角样式 */
-        nav {
-            border-radius: 10px;
-            overflow: hidden;
+        /* 导航栏样式 */
+        .navbar {
             background-color: #333;
+            overflow: hidden;
         }
 
-        /* 设置导航栏内的列表样式 */
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* 设置导航栏内的列表项样式 */
-        nav li {
+        /* 导航栏链接样式 */
+        .navbar a {
             float: left;
-        }
-
-        /* 设置导航栏内的链接样式 */
-        nav a {
             display: block;
             color: white;
             text-align: center;
@@ -34,46 +22,95 @@
             text-decoration: none;
         }
 
-        /* 鼠标悬停在链接上时改变颜色 */
-        nav a:hover {
-            background-color: #111;
+        /* 下拉按钮样式 */
+        .dropdown {
+            float: left;
+            overflow: hidden;
         }
 
-        /* 设置下拉菜单的内容分类之间有分隔线 */
-        li:not(:last-child) {
-            border-right: 1px solid #bbb;
+        /* 下拉内容样式 */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
         }
 
-        /* 分类标题行字体加粗 */
-        .dropdown-content h3 {
+        /* 下拉内容链接样式 */
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        /* 鼠标悬停在下拉按钮上时显示下拉内容 */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* 分类标题行样式 */
+        .category-title {
             font-weight: bold;
         }
 
         /* 分类内容文字加链接 */
-        .dropdown-content a {
-            text-decoration: underline;
+        .category-link {
+            text-decoration: none;
+            color: blue;
         }
     </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#home">首页</a></li>
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">分类</a>
-                <div class="dropdown-content">
-                    <h3>分类一</h3>
-                    <a href="#">链接1</a>
-                    <a href="#">链接2</a>
-                    <a href="#">链接3</a>
-                    <h3>分类二</h3>
-                    <a href="#">链接4</a>
-                    <a href="#">链接5</a>
-                    <a href="#">链接6</a>
-                </div>
-            </li>
-            <li><a href="#contact">联系我们</a></li>
-        </ul>
-    </nav>
+    <!-- 导航栏 -->
+    <div class="navbar">
+        <a href="#home">首页</a>
+        <a href="#news">新闻</a>
+
+  <div class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">首页</a>
+            <div class="dropdown-content">
+                <a href="#">分类1</a>
+                <a href="#">分类2</a>
+                <a href="#">分类3</a>
+            </div>
+        </div>
+
+
+  <div class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">新闻</a>
+            <div class="dropdown-content">
+                <a href="#">分类1</a>
+                <a href="#">分类2</a>
+                <a href="#">分类3</a>
+            </div>
+        </div>
+
+
+        <div class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">分类</a>
+            <div class="dropdown-content">
+                <a href="#">分类1</a>
+                <a href="#">分类2</a>
+                <a href="#">分类3</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 内容分类 -->
+    <div class="category-title">分类标题1</div>
+    <p><a href="#" class="category-link">分类内容1</a></p>
+    <p><a href="#" class="category-link">分类内容2</a></p>
+    <p><a href="#" class="category-link">分类内容3</a></p>
+
+<div class="category-title">分类标题1</div>
+    <p><a href="#" class="category-link">分类内容1</a></p>
+    <p><a href="#" class="category-link">分类内容2</a></p>
+    <p><a href="#" class="category-link">分类内容3</a></p>
+
 </body>
 </html>
