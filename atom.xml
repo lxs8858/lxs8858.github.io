@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://lxs8858.github.io</id>
+    <title>资源分享站</title>
+    <updated>2024-04-14T01:38:30.635Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://lxs8858.github.io"/>
+    <link rel="self" href="https://lxs8858.github.io/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://lxs8858.github.io/images/avatar.png</logo>
+    <icon>https://lxs8858.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2024, 资源分享站</rights>
+</feed>
