@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>道元宝库-优质资源分享网站</title>
+
+<meta http-equiv="refresh" content="5; url=https://www.dybk.top">
+    <!-- content="秒数; url=目标URL" -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      text-align: center;
+    }
+    .box {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .number {
+      font-size: 80px;
+      color: #666;
+      font-weight: bold;
+    }
+    .text {
+      font-size: 14px;
+      margin: 24px;
+      color: #333;
+    }
+    .btn-container {
+      display: flex;
+      justify-content: center;
+    }
+    .btn {
+      padding: 8px 24px;
+      display: inline-block;
+      text-decoration: none;
+      background: #fff;
+      border: 2px solid #efefef;
+      color: #333;
+      margin: 24px;
+      border-radius: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+    .footer {
+      padding: 16px;
+      border-top: 1px solid #efefef;
+      color: #777;
+      font-weight: lighter;
+    }
+    .footer a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="number">4 0 4</div>
+    
+<div class="text">
+
+ <p>页面将在 <span id="countdown">5</span> 秒后自动跳转到首页...</p><br>
+    <p><a href="https://www.dybk.top">立即跳转</a></p>
+    
+    <script>
+        // 倒计时显示
+        let seconds = 5;
+        const countdown = document.getElementById('countdown');
+        const timer = setInterval(() => {
+            seconds--;
+            countdown.textContent = seconds;
+            if (seconds <= 0) {
+                clearInterval(timer);
+            }
+        }, 1000);
+    </script>   
+        
+
+        
+    </div>
+    <div class="btn-container">
+      
+    </div>
+  </div>
+  <footer class="footer">
+    Powered by <a href="https://www.dybk.top" target="_blank">道元宝库</a>
+  </footer>
+  <script>
+    var back = document.getElementById('back')
+    back.onclick = function() { console.log('run...'); history.back() }
+  </script>
+</body>
+</html>
